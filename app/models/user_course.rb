@@ -11,6 +11,8 @@ class UserCourse < ActiveRecord::Base
   scope :joined_by, ->(user) {where user_id: user.id}
   scope :joined_as_trainee, ->(user) {where "user_id = ? AND supervisor = ?",
     user.id, false}
+  scope :get_user_course, -> (user_id, course_id) {where("user_id = ? AND course_id = ?",
+    user_id, course_id).first}
 
   class << self
     def build_users added_users, course

@@ -1,10 +1,10 @@
 <% case label %>
-<% when "active" %>
-  <span class="label label-success">
-<% when "not_active" %>
-  <span class="label label-warning">
-<% when "in_progress" %>
+<% when "open" %>
   <span class="label label-info">
+<% when "started" %>
+  <span class="label label-success">
+<% when "finished" %>
+  <span class="label label-danger">
 <% else %>
   <span class="label label-default">
 <% end %>

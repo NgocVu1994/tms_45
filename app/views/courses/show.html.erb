@@ -8,17 +8,6 @@
 </div>
 <div class="row">
   <div class="col-md-8">
-    <div class="edit-operation">
-      <%= link_to t("admin.courses.edit"), edit_admin_course_path(@course),
-        class: "btn btn-primary" %>
-      <%= link_to t("admin.courses.delete"), admin_course_path(@course),
-        method: :delete, data: {confirm: t("messages.confirm")},
-        class: "btn btn-danger" %>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-8">
     <div class="row">
       <h2 class="label-name">
         <%= t "client.courses.description" %>
@@ -31,7 +20,7 @@
       </h2>
       <ul>
         <% @course.subjects.each do |subject| %>
-          <h3><%= link_to subject.name, subject %></h3>
+          <h3><%= link_to subject.name, user_subject(subject.id) %></h3>
           <p><%= subject.description %></p>
         <% end %>
       </ul>

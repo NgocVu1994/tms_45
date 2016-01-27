@@ -20,6 +20,7 @@ en:
   manager_course: "COURSES"
   new_user: "New user?"
   download: "Download"
+  waiting: "waiting"
 
   confirm: "Confirmation"
   update_profile: "Update your profile"
@@ -58,12 +59,15 @@ en:
       finish: "Finish"
       submit: "Finish tasks"
     users:
+      joined: "joined"
+      not_joined: "not join"
       show:
         admin: "Admin"
         trainee: "Trainee"
         collapse: "Collapse"
       start_date: "Start date:"
     courses:
+      name: "View all course"
       course_info: "COURSE INFORMATIONS"
       subject_info: "SUBJECT INFORMATIONS"
       trainee_info: "TRAINNEE INFORMATIONS"
