@@ -13,11 +13,11 @@
       <% case course.status %>
       <% when "open" %>
         <%= link_to t("admin.courses.start_course"), admin_course_path(course, 
-          type: Settings.course.status_start), data: {confirm: t("messages.confirm")},
+          type: t("admin.courses.started_course")), data: {confirm: t("messages.confirm")},
           method: :patch, class: "btn btn-sm btn-default" %>
       <% when "started" %>
         <%= link_to t("admin.courses.finish_course"), admin_course_path(course, 
-          type: Settings.course.status_finish), data: {confirm: t("messages.confirm")},
+          type: t("admin.courses.finished_course")), data: {confirm: t("messages.confirm")},
           method: :patch, class: "btn btn-sm btn-danger" %>
       <% when "finished" %>
         <%= link_to t("admin.courses.unactive_course"), root_url,
